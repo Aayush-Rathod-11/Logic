@@ -1,9 +1,6 @@
-class Solution(object):
-    def letterCombinations(self, digits):
-        """
-        :type digits: str
-        :rtype: List[str]
-        """
+from typing import List
+class Solution:
+    def letterCombinations(self, digits: str) -> List[str]:
         if not digits:
             return []
 
