@@ -1,9 +1,5 @@
--- Write your PostgreSQL query statement below
-SELECT
-    p.firstName,
-    p.lastName,
-    a.city,
-    a.state
+/* Write your PL/SQL query statement below */
+SELECT p.firstname, p.lastname, a.city, a.state
 FROM Person p
 LEFT JOIN Address a
-    ON p.personId = a.personId;
+ON p.personId = a.personId;
