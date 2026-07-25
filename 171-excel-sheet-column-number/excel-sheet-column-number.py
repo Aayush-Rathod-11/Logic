@@ -1,9 +1,5 @@
-class Solution(object):
-    def titleToNumber(self, columnTitle):
-        """
-        :type columnTitle: str
-        :rtype: int
-        """
+class Solution:
+    def titleToNumber(self, columnTitle: str) -> int:
         result = 0
 
         for ch in columnTitle:
