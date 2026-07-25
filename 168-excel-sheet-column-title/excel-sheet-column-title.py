@@ -1,9 +1,5 @@
-class Solution(object):
-    def convertToTitle(self, columnNumber):
-        """
-        :type columnNumber: int
-        :rtype: str
-        """
+class Solution:
+    def convertToTitle(self, columnNumber: int) -> str:
         result = []
 
         while columnNumber > 0:
