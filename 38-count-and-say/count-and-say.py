@@ -3,19 +3,17 @@ class Solution:
         s = "1"
 
         for _ in range(n - 1):
-            result = []
-            i = 0
+            res = []
+            count = 1
 
-            while i < len(s):
-                j = i
+            for i in range(1, len(s) + 1):
+                if i < len(s) and s[i] == s[i - 1]:
+                    count += 1
+                else:
+                    res.append(str(count))
+                    res.append(s[i - 1])
+                    count = 1
 
-                while j < len(s) and s[j] == s[i]:
-                    j += 1
-
-                result.append(str(j - i))
-                result.append(s[i])
-                i = j
-
-            s = ''.join(result)
+            s = ''.join(res)
 
         return s
