@@ -1,0 +1,29 @@
+class Solution(object):
+    def combinationSum2(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        candidates.sort()
+        ans = []
+        path = []
+
+        def dfs(start, remain):
+            if remain == 0:
+                ans.append(path[:])
+                return
+
+            for i in range(start, len(candidates)):
+                if i > start and candidates[i] == candidates[i - 1]:
+                    continue
+
+                if candidates[i] > remain:
+                    break
+
+                path.append(candidates[i])
+                dfs(i + 1, remain - candidates[i])
+                path.pop()
+
+        dfs(0, target)
+        return ans
