@@ -1,10 +1,5 @@
-class Solution(object):
-    def searchRange(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
         def first():
             left, right = 0, len(nums) - 1
             ans = -1
@@ -40,3 +35,4 @@ class Solution(object):
             return ans
 
         return [first(), last()]
+        
