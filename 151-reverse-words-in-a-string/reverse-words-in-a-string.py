@@ -1,7 +1,3 @@
-class Solution(object):
-    def reverseWords(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
+class Solution:
+    def reverseWords(self, s: str) -> str:
         return " ".join(s.split()[::-1])
