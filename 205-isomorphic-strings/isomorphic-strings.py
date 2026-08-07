@@ -1,9 +1,6 @@
-class Solution(object):
-    def isIsomorphic(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        return [s.index(c) for c in s] == [t.index(c) for c in t]
         """
         if len(s) != len(t):
             return False
@@ -22,3 +19,4 @@ class Solution(object):
             ts[b] = a
 
         return True
+        """
