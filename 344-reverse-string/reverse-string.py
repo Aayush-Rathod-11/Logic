@@ -1,7 +1,8 @@
-class Solution:
-    def reverseString(self, s: List[str]) -> None:
+class Solution(object):
+    def reverseString(self, s):
         """
-        Do not return anything, modify s in-place instead.
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
         """
         left, right = 0, len(s) - 1
 
