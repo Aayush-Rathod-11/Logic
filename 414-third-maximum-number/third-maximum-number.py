@@ -1,9 +1,5 @@
-class Solution(object):
-    def thirdMax(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
         first = second = third = None
 
         for x in nums:
