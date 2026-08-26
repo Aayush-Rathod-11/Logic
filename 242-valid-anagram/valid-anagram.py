@@ -6,7 +6,7 @@ class Solution:
         count = [0] * 26
 
         for a, b in zip(s, t):
-            count[ord(a) - ord('a')] += 1
-            count[ord(b) - ord('a')] -= 1
+            count[ord(a) - 97] += 1
+            count[ord(b) - 97] -= 1
 
         return all(x == 0 for x in count)
